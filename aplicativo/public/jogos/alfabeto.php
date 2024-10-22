@@ -8,7 +8,6 @@
 </head>
 
 <style>
-    /* Variáveis de cores */
 :root {
     --cor-animais: #ff7675;
     --cor-frutas: #74b9ff;
@@ -21,7 +20,7 @@
     --cor-error: #f28d8d;
 }
 
-/* Estilos do corpo */
+
 body {
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -30,10 +29,10 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    background: var(--cor-fundo-gradiente); /* Gradiente colorido */
+    background: var(--cor-fundo-gradiente); 
 }
 
-/* Estilo do título */
+
 h1 {
     font-size: 2.5em;
     color: #fff;
@@ -41,7 +40,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Tela inicial */
+
 #start-screen {
     display: flex;
     flex-direction: column;
@@ -55,7 +54,7 @@ h1 {
     gap: 20px;
 }
 
-/* Botões de modo */
+
 .mode-btn {
     font-size: 1.5rem;
     font-weight: bold;
@@ -71,40 +70,38 @@ h1 {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Cores dos botões de modo */
+
 .animal { background-color: var(--cor-animais); color: #fff; }
 .fruits { background-color: var(--cor-frutas); color: #fff; }
 .food { background-color: var(--cor-objetos); color: #fff; }
 
-/* Ocultar contêineres */
 .hidden {
     display: none;
 }
 
-/* Contêiner principal para letras e imagens */
+
 .main-container {
     display: flex; 
     justify-content: space-between; 
     width: 90%; 
-    gap: 380px; /* Aumentar o gap entre as colunas */
+    gap: 380px;
 }
 
-/* Contêiner de letras */
 .letters-container {
     display: flex;
     flex-direction: column; 
     align-items: center; 
     width: 45%; 
-    gap: 40px; /* Aumeaço entre as letras */
+    gap: 40px;
 }
 
-/* Contêiner de imagens */
+
 .images-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    width: 45%; /* Largura da coluna das imagens */
-    gap: 40px; /* Espaço entre as imagens */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 45%; 
+    gap: 40px; 
     padding: 20px; 
 }
 

@@ -271,6 +271,16 @@
             margin-left: 35%;
         }
 
+        .img-nova {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-left: auto; 
+            margin-right: auto; 
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .text-section { width: 95%; }
             .image-section img { width: 90%; max-width: 200px; }
@@ -463,6 +473,7 @@
         <div class="dropdown" id="dropdown-menu">
             <a href="#" onclick="showPage('perfil')">Perfil</a>
             <a href="#" onclick="showPage('ajuda')">Ajuda</a>
+            <a href="pais.php">ir para área pais</a>
             <a href="logout.php">Sair</a>
         </div>
     </div>
@@ -486,12 +497,8 @@
 
             <div class="container">
                 <div class="image-section">
-                    <img src="../img/ia (1).png" alt="Nina">
+                    <img src="../img/ia (1).png" alt="Nina" >
                 </div>
-                <a href="pais.php">
-                    <button class="botao">Área dos pais</button>
-                </a>    
-
                 
                 <div class="text-section">
                     <h1>Bem-vindo amigo!</h1>
@@ -499,7 +506,7 @@
                 </div>
 
                 <div class="menu-section">
-                    <img src="../img/jogos.png" alt="Imagem de pintura" class="img-menu">
+                    <img src="../img/jogo.PNG" alt="Imagem de pintura" class="img-nova">
                     <h1>Jogos</h1>
                     <p>Hora de Brincar! Escolha um dos nossos jogos e divirta-se!</p>
                     <a href="jogos/jogos.php">
@@ -508,7 +515,7 @@
                 </div>
 
                 <div class="menu-section">
-                    <img src="../img/rotina.png" alt="imagem com relogio" class="img-menu">
+                    <img src="../img/rotinaa.png" alt="imagem com relogio" class="img-nova">
                     <h1>Rotina</h1>
                     <p>Clique aqui e veja a rotina que seus pais deixaram para você!</p>
                     <a href="rotinaC.php">

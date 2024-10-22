@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo dos Sentidos</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <style>
@@ -160,7 +159,7 @@ h1 {
               <button class="choice" id="choice-4"></button>
           </div>
           <p id="feedback"></p>
-          <button id="next-phase-button" style="display:none;">Próxima Fase</button> <!-- Botão da próxima fase -->
+          <button id="next-phase-button" style="display:none;">Próxima Fase</button>
       </div>
 </body>
 
@@ -174,7 +173,7 @@ const choices = Array.from(document.getElementsByClassName("choice"));
 const feedback = document.getElementById("feedback");
 const nextPhaseButton = document.getElementById("next-phase-button");
 
-let currentPhase = 0; // Fase inicial
+let currentPhase = 0; 
 
 const phases = [
     {
@@ -299,7 +298,7 @@ const phases = [
     },
 ];
 
-// Função para carregar a fase
+
 function loadPhase(phaseIndex) {
     const phase = phases[phaseIndex];
     questionText.textContent = phase.question;
@@ -340,7 +339,5 @@ startButton.onclick = () => {
     gameScreen.style.display = "block";
     loadPhase(currentPhase);
 };
-
 </script>
-
 </html>

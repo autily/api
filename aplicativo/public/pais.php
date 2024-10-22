@@ -490,6 +490,100 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         #info-list button {
             margin-left: 10px; /* Espaço entre o texto e os botões */
         }
+
+        ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .plans {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      width: 280%;
+      margin-left: 20%;
+    }
+
+    .plan {
+      background-color: #2986ff;
+      padding: 20px;
+      text-align: center;
+      width: 22%;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .plan:hover {
+      transform: scale(1.05);
+    }
+
+    .plan.active {
+      background-color: #5db1ff;
+    }
+
+    .plan h3 {
+      margin-bottom: 10px;
+    }
+
+    .plan p {
+      font-size: 18px;
+    }
+
+    /* Estilos do modal */
+    .modal {
+      display: none; 
+      position: fixed;
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 60%; 
+      border-radius: 10px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover, .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Estilos do botão */
+    #openModalBtn {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0400ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .pix{
+        width: 18%;
+    }
     </style>
 </head>
 <body>
@@ -500,7 +594,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         <div class="dropdown" id="dropdown-menu">
             <a href="#" onclick="showPage('perfil')">Perfil</a>
             <a href="#" onclick="showPage('ajuda')">Ajuda</a>
-            <a href="logout.php">Sair</a>
+            <a href="crianca.php">ir para área criança</a>
+            <a href="logout.php">Sair</a>     
         </div>
     </div>
 </header>
@@ -523,17 +618,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         <div class="container">
             <div class="image-section">
                 <img src="../img/ia (1).png" alt="Nina">
-            </div>
-            <a href="crianca.php">
-                <button class="botao">Área das crianças</button>
-            </a>    
+            </div>   
             <div class="text-section">
                 <h1>Bem-vindo Pais!</h1>
-                <p>Esta é a área dedicada às crianças. Aqui você pode interagir com jogos, rotinas e muito mais!</p>
+                <p>Esta é a área dedicada aos pais. Aqui você pode adicionar rotinas pro seu filho(a), evolução, rede dre apoio e outros!</p>
             </div>
 
             <div class="menu-section">
-                <img src="../img/rotina.png" alt="Imagem de pintura" class="img-menu">
+                <img src="../img/rotinap.png" alt="Imagem de pintura" class="img-nova">
                 <h1>Rotina</h1>
                 <p>Monte a rotina personalizada do dia para o seu pequeno!</p>
                 <a href="rotinaP.php">
@@ -542,7 +634,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             </div>
 
             <div class="menu-section">
-                <img src="../img/rotina.png" alt="Imagem de pintura" class="img-menu">
+                <img src="../img/evolução.png" alt="Imagem de pintura" class="img-nova">
                 <h1>Evolução</h1>
                 <p>Veja a evolução do seu pequeno!</p>
                 <a href="evolucao.php">
@@ -550,7 +642,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 </a>
             </div>
 
-            <!-- Outras seções do menu -->
+            <div class="menu-section">
+                <img src="../img/apoio.png" alt="imagem com relogio" class="img-nova">
+                <h1>Rede de Apoio</h1>
+                <p>Faça parte da nossa rede de apoio!</p>
+                <a href="https://chat.whatsapp.com/KcNoj4RsE0a50VPkM1A3XY">
+                    <button class="botao">Entrar</button>
+                </a>
+            </div>
+
+            <div class="menu-section">
+                <img src="../img/especialista.png" alt="imagem com relogio" class="img-nova">
+                <h1>Converse com uma especialista</h1>
+                <p>Faça parte da nossa rede de apoio!</p>
+                    <button id="openModalBtn">Escolher Plano</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Assine um plano mensal com um especialista:</h2>
+              <ul>
+                <li>✔ Direito a 3 consultas mensais agendadas.</li>
+                <li>✔ Tire suas duvidas.</li>
+                <li>✔ Dicas para o cotidiano.</li>
+                <li>✔ Ajuda para compreender seu filho.</li>
+              </ul>
+        
+              <div class="plans">
+                <div class="plan">
+                    <h3>Padrão</h3>
+                    <p>R$150,00</p>
+                  </div>
+            </div>
+            <h4>Forma de pagamento:</h4>
+            <img src="../img/pix.PNG" alt="" class="pix">
+            <h4>11 93287-5510</h4>
+          </div>
         </div>
 
         <div id="page-content">
@@ -593,7 +723,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                             </div>
                             <button class="add-info-btn" onclick="addExtraInfo()">+ Adicionar</button>
                         
-                            <ul id="info-list"></ul> <!-- Lista para informações adicionais -->
+                            <ul id="info-list"></ul>
                         </div>                   
                         <div class="form-group">
                             <button type="submit">Salvar</button>
@@ -738,6 +868,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 li.appendChild(deleteButton);
                 infoListElement.appendChild(li);
             });
+        }
+
+        const modal = document.getElementById("modal");
+        const btn = document.getElementById("openModalBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+        modal.style.display = "block";
+        }
+
+        // Fechar o modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+        // Fechar o modal ao clicar fora dele
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
         }
 </script>
 </body>

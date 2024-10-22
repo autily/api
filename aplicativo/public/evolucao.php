@@ -220,14 +220,17 @@
       .main-content {
           flex: 1;
           display: flex;
-          justify-content: center; /* Centraliza horizontalmente */
-          align-items: center;     /* Centraliza verticalmente */
+          justify-content: center; 
+          align-items: center;     
           padding-bottom: 30px;
       }
         </style>
 </head>
 
 <header>
+    <a href="pais.php">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
     <img src="../img/autily azul claro.png" alt="Logo" class="logo">      
     <div class="menu-container">
     </div>
