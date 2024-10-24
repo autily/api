@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,17 +73,18 @@
         }
 
         .logo {
-            height: 40px; 
+            height: 40px;
             margin-left: 47%;
         }
 
         .perfil-icon {
-            font-size: 50px; 
+            font-size: 50px;
             color: white;
             margin-left: auto;
         }
 
-        h1, p {
+        h1,
+        p {
             color: #fff;
         }
 
@@ -114,7 +116,7 @@
         .image-section img {
             width: 120%;
             border-radius: 50%;
-            max-width: 300px; 
+            max-width: 300px;
         }
 
         .text-section {
@@ -152,7 +154,7 @@
         }
 
         .icone-container {
-            background-color: rgba(114, 162, 250, 0.8); 
+            background-color: rgba(114, 162, 250, 0.8);
             border-radius: 2%;
             padding: 15px;
             display: flex;
@@ -196,31 +198,91 @@
             border-radius: 50%;
             opacity: 0.5;
             background-color: #66B9FA;
-            animation: rise 15s infinite linear; 
+            animation: rise 15s infinite linear;
         }
 
         @keyframes rise {
             0% {
-                transform: translateY(100vh); 
+                transform: translateY(100vh);
             }
+
             100% {
-                transform: translateY(-100vh); 
+                transform: translateY(-100vh);
             }
         }
 
-        .bubble:nth-child(1) { width: 100px; height: 100px; left: 10%; animation-duration: 7s; }
-        .bubble:nth-child(2) { width: 150px; height: 150px; left: 70%; animation-duration: 12s; }
-        .bubble:nth-child(3) { width: 50px; height: 50px; left: 30%; animation-duration: 10s; }
-        .bubble:nth-child(4) { width: 80px; height: 80px; left: 50%; animation-duration: 15s; }
-        .bubble:nth-child(5) { width: 60px; height: 60px; left: 20%; animation-duration: 8s; }
-        .bubble:nth-child(6) { width: 120px; height: 120px; left: 80%; animation-duration: 18s; }
-        .bubble:nth-child(7) { width: 90px; height: 90px; left: 40%; animation-duration: 20s; }
-        .bubble:nth-child(8) { width: 110px; height: 110px; left: 60%; animation-duration: 14s; }
-        .bubble:nth-child(9) { width: 130px; height: 130px; left: 15%; animation-duration: 22s; }
-        .bubble:nth-child(10) { width: 70px; height: 70px; left: 75%; animation-duration: 9s; }
+        .bubble:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            left: 70%;
+            animation-duration: 12s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 30%;
+            animation-duration: 10s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            animation-duration: 15s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 60px;
+            height: 60px;
+            left: 20%;
+            animation-duration: 8s;
+        }
+
+        .bubble:nth-child(6) {
+            width: 120px;
+            height: 120px;
+            left: 80%;
+            animation-duration: 18s;
+        }
+
+        .bubble:nth-child(7) {
+            width: 90px;
+            height: 90px;
+            left: 40%;
+            animation-duration: 20s;
+        }
+
+        .bubble:nth-child(8) {
+            width: 110px;
+            height: 110px;
+            left: 60%;
+            animation-duration: 14s;
+        }
+
+        .bubble:nth-child(9) {
+            width: 130px;
+            height: 130px;
+            left: 15%;
+            animation-duration: 22s;
+        }
+
+        .bubble:nth-child(10) {
+            width: 70px;
+            height: 70px;
+            left: 75%;
+            animation-duration: 9s;
+        }
 
         .botao {
-            background-color: #2986ff; 
+            background-color: #2986ff;
             padding: 15px 30px;
             border: none;
             border-radius: 25px;
@@ -230,7 +292,9 @@
             transition: background-color 0.3s;
         }
 
-        .texto { color: rgb(255, 255, 255); }
+        .texto {
+            color: rgb(255, 255, 255);
+        }
 
         .menu-section {
             background-color: #00a2ff;
@@ -248,7 +312,8 @@
             height: auto;
         }
 
-        .menu-section h1, .menu-section p {
+        .menu-section h1,
+        .menu-section p {
             margin: 10px 0;
         }
 
@@ -272,18 +337,24 @@
         }
 
         .img-nova {
-            width: 200px; 
-            height: 200px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            margin-left: auto; 
-            margin-right: auto; 
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
             display: block;
         }
 
         @media (max-width: 768px) {
-            .text-section { width: 95%; }
-            .image-section img { width: 90%; max-width: 200px; }
+            .text-section {
+                width: 95%;
+            }
+
+            .image-section img {
+                width: 90%;
+                max-width: 200px;
+            }
         }
 
         .menu-container {
@@ -332,6 +403,7 @@
             float: right;
             font-size: 24px;
             cursor: pointer;
+            color: #000000;
         }
 
         .form-group {
@@ -352,7 +424,7 @@
         }
 
         .form-group button {
-            background-color: #2986ff; 
+            background-color: #2986ff;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -365,12 +437,15 @@
         }
 
         .text-section h1 {
-            margin-bottom: 20px; /* Mais espaço entre o título e o parágrafo */
+            margin-bottom: 20px;
+            /* Mais espaço entre o título e o parágrafo */
         }
 
         .text-section button {
-            background-color: #77c2ff; /* Azul mais agradável */
-            padding: 12px 25px; /* Tamanho do botão ajustado */
+            background-color: #77c2ff;
+            /* Azul mais agradável */
+            padding: 12px 25px;
+            /* Tamanho do botão ajustado */
             border: none;
             border-radius: 5px;
             color: white;
@@ -380,7 +455,8 @@
         }
 
         .text-section button:hover {
-            background-color: #66a5e1; /* Cor ao passar o mouse */
+            background-color: #66a5e1;
+            /* Cor ao passar o mouse */
         }
 
         .icon-buttons {
@@ -397,7 +473,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin: 5px; /* Espaço entre os botões */
+            margin: 5px;
+            /* Espaço entre os botões */
         }
 
         .icon-buttons button:hover {
@@ -418,7 +495,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px; /* Espaço entre os botões */
+            margin: 10px;
+            /* Espaço entre os botões */
             transition: background-color 0.3s;
         }
 
@@ -433,13 +511,16 @@
         }
 
         .add-delete-container button {
-            margin: 0 10px; /* Espaço entre os botões */
+            margin: 0 10px;
+            /* Espaço entre os botões */
         }
 
         .form-group button {
-            display: block; /* Para centralizar */
-            margin: 20px auto; /* Centraliza o botão de salvar */
-            background-color: #2986ff; 
+            display: block;
+            /* Para centralizar */
+            margin: 20px auto;
+            /* Centraliza o botão de salvar */
+            background-color: #2986ff;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -452,35 +533,83 @@
         }
 
         #info-list {
-            list-style-type: none; /* Remove marcadores da lista */
-            padding: 0; /* Remove preenchimento */
+            list-style-type: none;
+            padding: 0;
         }
 
         #info-list li {
-            margin: 5px 0; /* Espaçamento entre os itens da lista */
+            margin: 5px 0;
         }
 
         #info-list button {
-            margin-left: 10px; /* Espaço entre o texto e os botões */
+            margin-left: 10px;
         }
-        </style>
+
+        .alert-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-box {
+            background: linear-gradient(45deg, #ffffff, #0099ff);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+
+        .input-password {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .sign-in-button {
+            background-color: #0059ff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <header>
-    <img src="../img/autily azul claro.png" alt="Logo" class="logo">      
+    <img src="../img/autily azul claro.png" alt="Logo" class="logo">
     <div class="menu-container">
         <i class="fas fa-bars" id="menu-icon" style="font-size: 30px; color: white; cursor: pointer;"></i>
         <div class="dropdown" id="dropdown-menu">
             <a href="#" onclick="showPage('perfil')">Perfil</a>
             <a href="#" onclick="showPage('ajuda')">Ajuda</a>
-            <a href="pais.php">ir para área pais</a>
+            <a href="#" onclick="showAlert()">Ir para área dos pais</a>
+            <div id="customAlert" class="alert-container" style="display: none;">
+                <div class="alert-box">
+                    <span class="close" onclick="closeAlert()">&times;</span>
+                    <input type="password" placeholder="Password" class="input-password">
+                    <button class="sign-in-button" onclick="redirectToPais()">Entrar</button>
+                </div>
+            </div>
             <a href="logout.php">Sair</a>
         </div>
     </div>
 </header>
 
+
 <body>
-    <div class="scrollable-app">    
+    <div class="scrollable-app">
         <main class="main-content">
             <div class="background-bubbles">
                 <div class="bubble"></div>
@@ -497,9 +626,9 @@
 
             <div class="container">
                 <div class="image-section">
-                    <img src="../img/ia (1).png" alt="Nina" >
+                    <img src="../img/ia (1).png" alt="Nina">
                 </div>
-                
+
                 <div class="text-section">
                     <h1>Bem-vindo amigo!</h1>
                     <p>Esta é a área dedicada às crianças. Aqui você pode interagir com jogos, rotinas e muito mais!</p>
@@ -510,7 +639,7 @@
                     <h1>Jogos</h1>
                     <p>Hora de Brincar! Escolha um dos nossos jogos e divirta-se!</p>
                     <a href="jogos/jogos.php">
-                     <button class="botao">Começar a Jogar</button>
+                        <button class="botao">Começar a Jogar</button>
                     </a>
                 </div>
 
@@ -528,7 +657,7 @@
                 <span class="close" onclick="closeModal()">&times;</span>
                 <div id="content">
                     <h2>Perfil</h2>
-                    
+
                     <div class="form-group">
                         <label for="tipo">Tipo:</label>
                         <select id="tipo" required>
@@ -564,9 +693,9 @@
                                 <input type="text" id="extra-info" placeholder="Digite aqui...">
                             </div>
                             <button class="add-info-btn" onclick="addExtraInfo()">+ Adicionar</button>
-                        
+
                             <ul id="info-list"></ul> <!-- Lista para informações adicionais -->
-                        </div>                   
+                        </div>
                         <div class="form-group">
                             <button type="submit">Salvar</button>
                         </div>
@@ -584,138 +713,142 @@
     </div>
 
     <script>
-        document.getElementById('menu-icon').onclick = function() {
+        document.getElementById('menu-icon').onclick = function () {
             const dropdown = document.getElementById('dropdown-menu');
             dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
         };
-    
+
         function showPage(page) {
             let content = '';
             if (page === 'perfil') {
                 content = `
-                    <h2>Perfil</h2>
+            <h2>Perfil</h2>
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" required>
+                    <option value="pai">Pai</option>
+                    <option value="responsavel">Responsável</option>
+                </select>
+            </div>
+            <form id="perfil-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" required>
+                </div>
+                <div class="form-group">
+                    <label for="nivel-autismo">Nível do Autismo:</label>
+                    <select id="nivel-autismo" required>
+                        <option value="leve">Leve</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="severo">Severo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email do responsável:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="extra-info" id="extra-info-container">
+                    <h2>Adiconar Informações Extras</h2>
                     <div class="form-group">
-                        <label for="tipo">Tipo:</label>
-                        <select id="tipo" required>
-                            <option value="pai">Pai</option>
-                            <option value="responsavel">Responsável</option>
-                        </select>
+                        <input type="text" id="extra-info" placeholder="Digite aqui...">
                     </div>
-                    <form id="perfil-form">
-                        <div class="form-group">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="idade">Idade:</label>
-                            <input type="number" id="idade" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nivel-autismo">Nível do Autismo:</label>
-                            <select id="nivel-autismo" required>
-                                <option value="leve">Leve</option>
-                                <option value="moderado">Moderado</option>
-                                <option value="severo">Severo</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email do responsável:</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="extra-info" id="extra-info-container">
-                            <h2>Adiconar Informações Extras</h2>
-                            <div class="form-group">
-                                <input type="text" id="extra-info" placeholder="Digite aqui...">
-                            </div>
-                            <button class="add-info-btn" onclick="addExtraInfo()">+ Adicionar</button>
-                            <ul id="info-list"></ul> <!-- Lista para informações adicionais -->
-                        </div>                   
-                        <div class="form-group">
-                            <button type="submit">Salvar</button>
-                        </div>
-                    </form>
-                `;
+                    <button class="add-info-btn" onclick="addExtraInfo()">+ Adicionar</button>
+                    <ul id="info-list"></ul> <!-- Lista para informações adicionais -->
+                </div>                   
+                <div class="form-group">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+        `;
             } else if (page === 'ajuda') {
                 content = `
-                    <h2 style="color: black; margin-bottom:20px;">Ajuda</h2>
-                    <p style="color: black;">Bem-vindo à seção de ajuda do Autily!</p> 
-                    <p style="color: black;">1. O autily tem como objetivo facilitar e auxiliar o seu cotidiano</p> 
-                    <p style="color: black;">2. Ao clicar na rotina, voce vera a rotina do dia que seus pais ou responsaveis te deixaram!</p>
-                    <p style="color: black;">3. Ao clicar nos Jogos o autily te dara varias opções de jogos, escolha o que mais te agrada e jogue a vontade!</p> 
-                    <p style="color: black;">Para mais informações entrar em contato com a equipe autily pelo email abaixo:</p>
-                `;
+            <h2 style="color: black; margin-bottom:20px;">Ajuda</h2>
+            <p style="color: black;">Bem-vindo à seção de ajuda do Autily!</p> 
+            <p style="color: black;">1. O Autily tem como objetivo facilitar e auxiliar o seu cotidiano.</p> 
+            <p style="color: black;">2. Ao clicar na rotina, você verá a rotina do dia que seus pais ou responsáveis deixaram!</p>
+            <p style="color: black;">3. Ao clicar nos Jogos, o Autily te dará várias opções de jogos, escolha o que mais te agrada e jogue à vontade!</p> 
+            <p style="color: black;">Para mais informações, entre em contato com a equipe Autily pelo email abaixo:</p>
+        `;
             }
-    
+
             document.getElementById('content').innerHTML = content;
-    
-            // Adiciona a funcionalidade de salvar para o formulário
+
             if (page === 'perfil') {
-                document.getElementById('perfil-form').onsubmit = function(event) {
+                document.getElementById('perfil-form').onsubmit = function (event) {
                     event.preventDefault();
                     alert('Perfil salvo com sucesso!');
                     closeModal();
                 };
             }
-    
+
             document.getElementById('page-content').style.display = 'block';
         }
-    
+
         function closeModal() {
             document.getElementById('page-content').style.display = 'none';
         }
-    
+
         const infoList = [];
-    
+
         function addExtraInfo() {
             const extraInfoInput = document.getElementById('extra-info');
             const info = extraInfoInput.value.trim();
-            
+
             if (info) {
                 infoList.push(info);
-                extraInfoInput.value = ''; // Limpa o campo de entrada
-                updateInfoList(); // Atualiza a lista exibida
+                extraInfoInput.value = '';
+                updateInfoList();
             }
         }
-    
+
         function deleteInfo(index) {
             infoList.splice(index, 1);
-            updateInfoList(); // Atualiza a lista exibida
+            updateInfoList();
         }
-    
+
         function editInfo(index) {
             const newInfo = prompt('Edite a informação:', infoList[index]);
             if (newInfo !== null) {
                 infoList[index] = newInfo;
-                updateInfoList(); // Atualiza a lista exibida
+                updateInfoList();
             }
         }
-    
+
         function updateInfoList() {
             const infoListElement = document.getElementById('info-list');
-            infoListElement.innerHTML = ''; // Limpa a lista antes de re-popular
-    
+            infoListElement.innerHTML = '';
+
             infoList.forEach((info, index) => {
                 const li = document.createElement('li');
                 li.textContent = info;
-    
+
                 const editButton = document.createElement('button');
                 editButton.textContent = '✏️ Editar';
                 editButton.onclick = () => editInfo(index);
-    
+
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = '🗑️ Deletar';
                 deleteButton.onclick = () => deleteInfo(index);
-    
+
                 li.appendChild(editButton);
                 li.appendChild(deleteButton);
                 infoListElement.appendChild(li);
             });
         }
-    </script>
-    
-    
-    
-    
 
+        function showAlert() {
+            document.getElementById('customAlert').style.display = 'flex';
+        }
+
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none'; 
+        }
+
+    </script>
 </body>
+
 </html>
