@@ -133,7 +133,7 @@
         <h1>Jogos</h1>
     <a href="jogocores.php">
         <div class="jogos-card">
-            <img src="..img/gato nerd" alt="" class="jogos-image">
+            <img src="../img_jogos/alfabeto.PNG" alt="" class="jogos-image">
             <div class="jogos-info">
                 <h2>Jogo das cores</h2>
                 <p>As cores serão mostradas em uma ordem, clique nas cores conforme foram mostradas!</p>
