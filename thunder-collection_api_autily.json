@@ -1,0 +1,92 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "api_autily",
+    "collectionId": "199f346a-9efe-4723-babb-0ea555bd041a",
+    "dateExported": "2024-10-29T12:40:58.183Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dde37720-d261-4ab1-8bcb-3de29e007f26",
+            "colId": "199f346a-9efe-4723-babb-0ea555bd041a",
+            "containerId": "",
+            "name": "recuperar_senha",
+            "url": "http://localhost/aplicativo/api/recuperar_senha.php",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-29T12:38:50.841Z",
+            "modified": "2024-10-29T12:38:50.841Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"email\": \"ariany178andrade@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9bcc3e8d-5b86-4188-8953-664ea2f83f9b",
+            "colId": "199f346a-9efe-4723-babb-0ea555bd041a",
+            "containerId": "",
+            "name": "cadastro",
+            "url": "http://localhost/aplicativo/api/auth.php",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-29T12:39:09.020Z",
+            "modified": "2024-10-29T12:39:09.020Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"acao\": \"cadastro\",\n  \"nome\": \"Seu Nome\",\n  \"email\": \"seu_email@example.com\",\n  \"senha\": \"sua_senha\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b0e8f1d9-c153-4c82-a795-54c6b9d92acf",
+            "colId": "199f346a-9efe-4723-babb-0ea555bd041a",
+            "containerId": "",
+            "name": "login",
+            "url": "https://localhost/aplicativo/api/auth.php",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-10-29T12:39:16.958Z",
+            "modified": "2024-10-29T12:39:16.958Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"acao\": \"login\",\n  \"email\": \"seu_email@example.com\",\n  \"senha\": \"sua_senha\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "32038fa3-fb7e-46fe-836b-4059af65ec42",
+            "colId": "199f346a-9efe-4723-babb-0ea555bd041a",
+            "containerId": "",
+            "name": "criarconta.php",
+            "url": "http://localhost/aplicativo/api/criarconta.php",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-10-29T12:39:24.823Z",
+            "modified": "2024-10-29T12:39:24.823Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nome",
+                        "value": "usuario"
+                    },
+                    {
+                        "name": "email",
+                        "value": "usuario@example"
+                    },
+                    {
+                        "name": "senha",
+                        "value": "senha"
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "7OQTaQ6p2ry6wCxFvikwS7ekSo6Djyk757BeZs3Q-cBBqXiRkCHxX6rtzN95_SC2ZHL8LISZBoANJiqCu4mPTA"
+}
