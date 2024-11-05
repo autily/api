@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Jogo dos Sentidos</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #a8edea, #fed6e3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    #next-phase-button {
+        display: none;
+        background-color: #E91E63;
+        color: white;
+        padding: 10px 20px; 
+        font-size: 1rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #next-phase-button:hover {
+        background-color: #D81B60;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    #next-phase-button:focus {
+        outline: none;
+        border: 2px solid #F8BBD0;
+    }
+    
+    #next-phase-button:active {
+        background-color: #C2185B;
+        transform: scale(0.98);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    #game-container {
+        width: 100%;
+        max-width: 600px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    #game-container:hover {
+        transform: scale(1.02);
+    }
+    
+    #start-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #start-button {
+        background-color: #D81B60;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    #start-button:hover {
+        background-color: #C2185B;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    #game-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    
+    #question-text {
+        font-size: 1.8rem;
+        color: #444;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    #game-options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 5px solid #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    #image:hover {
+        transform: scale(1.05);
+    }
+    
+    #choices {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .choice {
+        padding: 15px 20px;
+        margin: 10px;
+        font-size: 2rem;
+        background-color: #f0f0f0;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .choice:hover {
+        background-color: #ddd;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .choice:focus {
+        outline: none;
+        border: 2px solid #4CAF50;
+    }
+    
+    #feedback {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+    }
+
+    header{
+        margin-bottom: 45%;
+    }
+</style>
+
+<header>
+    <a href="jogos.html" class="setajogo">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+</header>
+<body>
+    <div id="game-container">
+        <div id="start-screen">
+            <h1>Jogo dos Sentidos</h1>
+            <button id="start-button">Começar Jogo</button>
+        </div>
+
+        <div id="game-screen">
+          <h2 id="question-text"></h2>
+          <img id="image" src="" alt="Imagem do Jogo">
+          <div id="choices">
+              <button class="choice" id="choice-1"></button>
+              <button class="choice" id="choice-2"></button>
+              <button class="choice" id="choice-3"></button>
+              <button class="choice" id="choice-4"></button>
+          </div>
+          <p id="feedback"></p>
+          <button id="next-phase-button" style="display:none;">Próxima Fase</button> 
+</body>
+
+<script>
+    const startButton = document.getElementById("start-button");
+    const gameScreen = document.getElementById("game-screen");
+    const startScreen = document.getElementById("start-screen");
+    const questionText = document.getElementById("question-text");
+    const imageElement = document.getElementById("image");
+    const choices = Array.from(document.getElementsByClassName("choice"));
+    const feedback = document.getElementById("feedback");
+    const nextPhaseButton = document.getElementById("next-phase-button");
+
+    let currentPhase = 0; 
+
+    const phases = [
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/binoculo.png",
+            answers: ["👄", "👁️", "✋","👂"],
+            correctAnswer: 1
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/fone-de-ouvido.png",
+            answers: ["👂", "👁️", "👄","✋"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/luva.png",
+            answers: ["👄", "👂", "✋","👁️"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/oculos.png",
+            answers: ["👄", "👁️", "👂","✋"],
+            correctAnswer: 1
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/pizza.png",
+            answers: ["👄", "✋", "👂","👁️"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/tv.png",
+            answers: ["👁️", "👂", "👄","✋"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/teclado.png",
+            answers: ["✋", "👂", "👄","👁️"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/espelho.png",
+            answers: ["👄", "👂", "👁️","✋"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/tambor.png",
+            answers: ["✋", "👂", "👁️","👄"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/lapis.png",
+            answers: ["👁️", "👂", "✋","👄"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/urso-teddy.png",
+            answers: ["👄", "✋", "👁️","👂"],
+            correctAnswer: 1
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/macarrao.jpg",
+            answers: ["👂", "👁️", "👄","✋"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/radio.png",
+            answers: ["👁️", "👂", "👄","✋"],
+            correctAnswer: 1
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/chocolate.png",
+            answers: ["👄", "👁️", "👂","✋"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/megafone.png",
+            answers: ["👁️", "✋", "👂","👄"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/hamburguer.png",
+            answers: ["👄", "✋", "👂","👁️"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/cacto.png",
+            answers: ["👂", "👄", "✋","👁️"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/abra-o-livro.png",
+            answers: ["👁️", "✋", "👂","👄"],
+            correctAnswer: 0
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/caixas-de-som.png",
+            answers: ["👄", "✋", "👂","👁️"],
+            correctAnswer: 2
+        },
+        {
+            question: "Qual sentido usamos?",
+            image: "img_jogos/telescopio.png",
+            answers: ["👁️", "✋", "👄","👂"],
+            correctAnswer: 0
+        },
+    ];
+
+    function loadPhase(phaseIndex) {
+        const phase = phases[phaseIndex];
+        questionText.textContent = phase.question;
+        imageElement.src = phase.image;
+        feedback.textContent = "";
+        nextPhaseButton.style.display = "none";
+
+        choices.forEach((choice, index) => {
+            choice.textContent = phase.answers[index];
+            choice.style.backgroundColor = "#78C2AD"; 
+            choice.onclick = () => {
+                if (index === phase.correctAnswer) {
+                    feedback.textContent = "Correto!";
+                    choice.style.backgroundColor = "#90EE90";
+                    nextPhaseButton.style.display = "block";
+                } else {
+                    feedback.textContent = "Tente novamente!";
+                    choice.style.backgroundColor = "#FF6F61";
+                }
+            };
+        });
+    }
+
+
+    nextPhaseButton.onclick = () => {
+        currentPhase++;
+        if (currentPhase < phases.length) {
+            loadPhase(currentPhase);
+        } else {
+            feedback.textContent = "Você completou todas as fases!";
+            nextPhaseButton.style.display = "none";
+        }
+    };
+
+
+    startButton.onclick = () => {
+        startScreen.style.display = "none";
+        gameScreen.style.display = "block";
+        loadPhase(currentPhase);
+    };
+</script>
+
+</html>
