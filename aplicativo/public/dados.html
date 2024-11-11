@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Conta</title>
+    <title>Inserir dados da criança</title>
     <link rel="stylesheet" href="style.css">
     <style>
         * {
@@ -194,7 +194,7 @@
      <!-- Caixa principal -->
      <div class="container">
         <img src="../img/ia (1).png" alt="Doctor Image">
-        <h1>Crie sua conta</h1>
+        <h1>Insira os dados da criança</h1>
 
         <div id="msg" style="color:red;"></div>
 
@@ -203,45 +203,27 @@
                 <input type="text" name="nome" placeholder="Nome Completo" required>
             </div>
             <div class="input-group">
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email do responsável" required>
             </div>
             <div class="input-group">
-                <input type="password" name="senha" placeholder="Senha" required>
+                <input type="text" name="idade" placeholder="idade" required>
             </div>
-            <button class="button" type="submit">Criar Conta</button>
+
+            <div class="input-group">
+                <input type="text" name="suporte" placeholder="Nivel de suporte" required>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="info-extras" placeholder="Informações extras" required>
+            </div>
+            <button class="button" type="submit">Avançar</button>
         </form>
 
-        <div class="links">
-            <a href="index.html">Já tem uma conta? Faça login</a>
-        </div>
-    </div>
+    
 </div>
 
 <script>
- document.getElementById('formCadastro').addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita o envio padrão do formulário
-
-    const formData = new FormData(this);
-
-    fetch('../api/criarconta.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            document.getElementById('msg').innerText = data.message; // Exibe erro
-        } else {
-            // Se não houver erro, redireciona para 'dados.html'
-            window.location.href = 'dados.html';
-        }
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        document.getElementById('msg').innerText = "Erro ao cadastrar, tente novamente!";
-    });
-});
-
+  
 </script>
 </body>
 </html>
